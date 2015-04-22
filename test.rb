@@ -4,7 +4,7 @@ require 'net/http'
 
 puts "making get http request"
 
-url = URI('http://localhost:3000/api/matches')
+url = URI('http://localhost:3000/api/player/1')
 req = Net::HTTP::Get.new(url.to_s)
 res = Net::HTTP.start(url.host, url.port) {|http|
   http.request(req)

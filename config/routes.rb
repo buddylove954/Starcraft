@@ -4,5 +4,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     get '/matches' => 'matches#wins'
+    get '/matches/:faction' => 'matches#factions'
+    get '/player/:player_id' =>'player#show'
+    get '/player/:player_id/:faction' => 'player#show'
   end
 end
