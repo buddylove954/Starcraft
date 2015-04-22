@@ -11,15 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420205538) do
+ActiveRecord::Schema.define(version: 20150420212934) do
 
   create_table "matches", force: :cascade do |t|
     t.string   "winner_faction"
     t.string   "loser_faction"
     t.integer  "duration"
     t.datetime "start"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "winner_faction_id"
+    t.integer  "loser_faction_id"
+    t.integer  "wins_id"
+    t.integer  "loses_id"
+    t.integer  "winner_id"
+    t.integer  "loser_id"
   end
 
   create_table "players", force: :cascade do |t|
